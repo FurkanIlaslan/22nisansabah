@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container py-5">
+        <form method="POST" class="w-50 m-auto text-white p-3">
+            <h2 class="text-white text-center fw-bold">Kullanıcı Kayıt Formu</h2>
+            {% csrf_token %}
+            <label class="text-secondary">Kullanıcı Adı:</label>
+            {{form.username}}
+
+            <label class="text-secondary">Email:</label>
+            {{form.email}}
+
+            <label class="text-secondary">Parola:</label>
+            {{form.password1}}
+
+            <label class="text-secondary">Parola Tekrar:</label>
+            {{form.password2}}
+            
+            <button type="submit" class="btn btn-danger mt-3">Kayıt Ol</button>
+        </form>
+    </div>
+
+{% endblock content %}

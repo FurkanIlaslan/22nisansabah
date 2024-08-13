@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+    <div class="container py-5">
+        <form method="POST" class="w-50 m-auto p-3 text-white">
+            {% csrf_token %}
+            <h2 class="text-white text-center fw-bold">Kullanıcı Giriş Formu</h2>
+            <label>Kullanıcı Adı:</label>
+            <input type="text" name="kullanici" class="form-control">
+
+            <label>Şifre:</label>
+            <input type="password" name="sifre" class="form-control">
+
+            <button type="submit" class="btn btn-danger mt-3">Giriş Yap</button>
+        </form>
+    </div>
+{% endblock content %}
