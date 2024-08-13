@@ -68,7 +68,7 @@ def passwordChange(request):
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, request.user)
-            messages.success(request,"Şifre değiştirme başarılı!")
+            messages.success(request,"Şifre değiştirme başarılı! Tebrikler!")
             return redirect('index')
         else:
             messages.error(request, "Doğru bilgi giriniz.")
